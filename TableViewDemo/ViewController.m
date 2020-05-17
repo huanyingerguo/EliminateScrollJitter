@@ -56,7 +56,7 @@
                 if (!self.fileList) {
                     self.fileList = [NSMutableArray array];
                 }
-                [self.fileList addObject:filePath];
+                [self.fileList addObject:filePath.lastPathComponent];
             }
             
             [self.fileListTableview reloadData];
@@ -98,14 +98,21 @@
 //    NSInteger delt = docHeight - contentHeight;
 //    if (contentOffSet.y) {
 //
-//    }
+//
     
+    __weak typeof(self) weakSelf = self;
     [self.trigger triggerWithCallback:^{
-        //
+        __strong typeof(self) self = weakSelf;
+        NSArray *subs =  self.fileListTableview.accessibilityVisibleRows;
+        
+        NSMutableArray *arr1 = [NSMutableArray arrayWithCapacity:1];
+        [subs enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSInteger currentRow = [[obj valueForKey:@"row"] integerValue];
+            [arr1 addObject:[self.fileList objectAtIndex:currentRow]];
+        }];
+            
+        NSLog(@"subs=%@", arr1);
     }];
 }
 
-- (void)eliminateJitter {
-    
-}
 @end

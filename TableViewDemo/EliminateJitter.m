@@ -50,14 +50,14 @@ typedef NS_ENUM(NSUInteger, ERunStatus) {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.interval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         __strong typeof(weakSelf) self = weakSelf;
         if (self.status != ERunStatus_NotRun) {
-            NSLog(@"间隔抖动次数：status=%lu, triggerCnt=%ld", (unsigned long)self.status, (long)self.triggerCnt);
+            NSLog(@"间隔抖动次数：last=%lu, triggerCnt=%ld", (unsigned long)self.status, (long)self.triggerCnt);
             self.status = ERunStatus_NotRun; //消除一次抖动标识, 同时第二次运行判读是否扔在抖动
             [self didEliminateJitter];
             return;
         }
         
         
-        if (self.block) {
+        if (self.block && self.triggerCnt > 0) {
             self.triggerCnt = 0;
             self.block();
         }
