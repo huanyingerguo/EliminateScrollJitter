@@ -12,8 +12,6 @@
 		CAD33A44247126E4005247E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD33A43247126E4005247E8 /* Assets.xcassets */; };
 		CAD33A47247126E4005247E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD33A45247126E4005247E8 /* Main.storyboard */; };
 		CAD33A4A247126E4005247E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD33A49247126E4005247E8 /* main.m */; };
-		CAD33A55247126E4005247E8 /* TableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD33A54247126E4005247E8 /* TableViewDemoTests.m */; };
-		CAD33A60247126E4005247E8 /* TableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD33A5F247126E4005247E8 /* TableViewDemoUITests.m */; };
 		CAD33A6F24712D49005247E8 /* EliminateJitter.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD33A6E24712D49005247E8 /* EliminateJitter.m */; };
 		CAD33A7224713935005247E8 /* LoadBalancer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD33A7124713935005247E8 /* LoadBalancer.m */; };
 /* End PBXBuildFile section */
@@ -36,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CAD33A3A247126DF005247E8 /* TableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD33A3A247126DF005247E8 /* EliminateScrollJitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EliminateScrollJitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD33A3D247126DF005247E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CAD33A3E247126DF005247E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CAD33A40247126DF005247E8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -47,11 +45,7 @@
 		CAD33A49247126E4005247E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CAD33A4B247126E4005247E8 /* TableViewDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TableViewDemo.entitlements; sourceTree = "<group>"; };
 		CAD33A50247126E4005247E8 /* TableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAD33A54247126E4005247E8 /* TableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDemoTests.m; sourceTree = "<group>"; };
-		CAD33A56247126E4005247E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAD33A5B247126E4005247E8 /* TableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAD33A5F247126E4005247E8 /* TableViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDemoUITests.m; sourceTree = "<group>"; };
-		CAD33A61247126E4005247E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAD33A6D24712D49005247E8 /* EliminateJitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EliminateJitter.h; sourceTree = "<group>"; };
 		CAD33A6E24712D49005247E8 /* EliminateJitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EliminateJitter.m; sourceTree = "<group>"; };
 		CAD33A7024713935005247E8 /* LoadBalancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadBalancer.h; sourceTree = "<group>"; };
@@ -86,9 +80,7 @@
 		CAD33A31247126DF005247E8 = {
 			isa = PBXGroup;
 			children = (
-				CAD33A3C247126DF005247E8 /* TableViewDemo */,
-				CAD33A53247126E4005247E8 /* TableViewDemoTests */,
-				CAD33A5E247126E4005247E8 /* TableViewDemoUITests */,
+				CAD33A3C247126DF005247E8 /* EliminateScrollJitter */,
 				CAD33A3B247126DF005247E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,14 +88,14 @@
 		CAD33A3B247126DF005247E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAD33A3A247126DF005247E8 /* TableViewDemo.app */,
+				CAD33A3A247126DF005247E8 /* EliminateScrollJitter.app */,
 				CAD33A50247126E4005247E8 /* TableViewDemoTests.xctest */,
 				CAD33A5B247126E4005247E8 /* TableViewDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CAD33A3C247126DF005247E8 /* TableViewDemo */ = {
+		CAD33A3C247126DF005247E8 /* EliminateScrollJitter */ = {
 			isa = PBXGroup;
 			children = (
 				CAD33A7024713935005247E8 /* LoadBalancer.h */,
@@ -120,33 +112,15 @@
 				CAD33A6D24712D49005247E8 /* EliminateJitter.h */,
 				CAD33A6E24712D49005247E8 /* EliminateJitter.m */,
 			);
-			path = TableViewDemo;
-			sourceTree = "<group>";
-		};
-		CAD33A53247126E4005247E8 /* TableViewDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				CAD33A54247126E4005247E8 /* TableViewDemoTests.m */,
-				CAD33A56247126E4005247E8 /* Info.plist */,
-			);
-			path = TableViewDemoTests;
-			sourceTree = "<group>";
-		};
-		CAD33A5E247126E4005247E8 /* TableViewDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CAD33A5F247126E4005247E8 /* TableViewDemoUITests.m */,
-				CAD33A61247126E4005247E8 /* Info.plist */,
-			);
-			path = TableViewDemoUITests;
+			path = EliminateScrollJitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CAD33A39247126DF005247E8 /* TableViewDemo */ = {
+		CAD33A39247126DF005247E8 /* EliminateScrollJitter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CAD33A64247126E4005247E8 /* Build configuration list for PBXNativeTarget "TableViewDemo" */;
+			buildConfigurationList = CAD33A64247126E4005247E8 /* Build configuration list for PBXNativeTarget "EliminateScrollJitter" */;
 			buildPhases = (
 				CAD33A36247126DF005247E8 /* Sources */,
 				CAD33A37247126DF005247E8 /* Frameworks */,
@@ -156,9 +130,9 @@
 			);
 			dependencies = (
 			);
-			name = TableViewDemo;
+			name = EliminateScrollJitter;
 			productName = TableViewDemo;
-			productReference = CAD33A3A247126DF005247E8 /* TableViewDemo.app */;
+			productReference = CAD33A3A247126DF005247E8 /* EliminateScrollJitter.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CAD33A4F247126E4005247E8 /* TableViewDemoTests */ = {
@@ -219,7 +193,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CAD33A35247126DF005247E8 /* Build configuration list for PBXProject "TableViewDemo" */;
+			buildConfigurationList = CAD33A35247126DF005247E8 /* Build configuration list for PBXProject "EliminateScrollJitter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -232,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CAD33A39247126DF005247E8 /* TableViewDemo */,
+				CAD33A39247126DF005247E8 /* EliminateScrollJitter */,
 				CAD33A4F247126E4005247E8 /* TableViewDemoTests */,
 				CAD33A5A247126E4005247E8 /* TableViewDemoUITests */,
 			);
@@ -282,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAD33A55247126E4005247E8 /* TableViewDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAD33A60247126E4005247E8 /* TableViewDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,12 +271,12 @@
 /* Begin PBXTargetDependency section */
 		CAD33A52247126E4005247E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CAD33A39247126DF005247E8 /* TableViewDemo */;
+			target = CAD33A39247126DF005247E8 /* EliminateScrollJitter */;
 			targetProxy = CAD33A51247126E4005247E8 /* PBXContainerItemProxy */;
 		};
 		CAD33A5D247126E4005247E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CAD33A39247126DF005247E8 /* TableViewDemo */;
+			target = CAD33A39247126DF005247E8 /* EliminateScrollJitter */;
 			targetProxy = CAD33A5C247126E4005247E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -439,7 +411,7 @@
 				CODE_SIGN_ENTITLEMENTS = TableViewDemo/TableViewDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TableViewDemo/Info.plist;
+				INFOPLIST_FILE = EliminateScrollJitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -456,7 +428,7 @@
 				CODE_SIGN_ENTITLEMENTS = TableViewDemo/TableViewDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TableViewDemo/Info.plist;
+				INFOPLIST_FILE = EliminateScrollJitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -472,7 +444,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TableViewDemoTests/Info.plist;
+				INFOPLIST_FILE = EliminateScrollJitterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -490,7 +462,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TableViewDemoTests/Info.plist;
+				INFOPLIST_FILE = EliminateScrollJitterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -507,7 +479,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TableViewDemoUITests/Info.plist;
+				INFOPLIST_FILE = EliminateScrollJitterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -524,7 +496,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = TableViewDemoUITests/Info.plist;
+				INFOPLIST_FILE = EliminateScrollJitterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -539,7 +511,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CAD33A35247126DF005247E8 /* Build configuration list for PBXProject "TableViewDemo" */ = {
+		CAD33A35247126DF005247E8 /* Build configuration list for PBXProject "EliminateScrollJitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAD33A62247126E4005247E8 /* Debug */,
@@ -548,7 +520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CAD33A64247126E4005247E8 /* Build configuration list for PBXNativeTarget "TableViewDemo" */ = {
+		CAD33A64247126E4005247E8 /* Build configuration list for PBXNativeTarget "EliminateScrollJitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CAD33A65247126E4005247E8 /* Debug */,

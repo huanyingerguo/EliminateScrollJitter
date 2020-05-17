@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface TableViewDemoTests : XCTestCase
+@interface EliminateScrollJitterDemoTests : XCTestCase
 
 @end
 
-@implementation TableViewDemoTests
+@implementation EliminateScrollJitterDemoTests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
