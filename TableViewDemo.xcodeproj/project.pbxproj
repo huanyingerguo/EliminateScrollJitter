@@ -14,6 +14,8 @@
 		CAD33A4A247126E4005247E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD33A49247126E4005247E8 /* main.m */; };
 		CAD33A55247126E4005247E8 /* TableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD33A54247126E4005247E8 /* TableViewDemoTests.m */; };
 		CAD33A60247126E4005247E8 /* TableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD33A5F247126E4005247E8 /* TableViewDemoUITests.m */; };
+		CAD33A6F24712D49005247E8 /* EliminateJitter.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD33A6E24712D49005247E8 /* EliminateJitter.m */; };
+		CAD33A7224713935005247E8 /* LoadBalancer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD33A7124713935005247E8 /* LoadBalancer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,10 @@
 		CAD33A5B247126E4005247E8 /* TableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD33A5F247126E4005247E8 /* TableViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDemoUITests.m; sourceTree = "<group>"; };
 		CAD33A61247126E4005247E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAD33A6D24712D49005247E8 /* EliminateJitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EliminateJitter.h; sourceTree = "<group>"; };
+		CAD33A6E24712D49005247E8 /* EliminateJitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EliminateJitter.m; sourceTree = "<group>"; };
+		CAD33A7024713935005247E8 /* LoadBalancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadBalancer.h; sourceTree = "<group>"; };
+		CAD33A7124713935005247E8 /* LoadBalancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadBalancer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,8 @@
 		CAD33A3C247126DF005247E8 /* TableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CAD33A7024713935005247E8 /* LoadBalancer.h */,
+				CAD33A7124713935005247E8 /* LoadBalancer.m */,
 				CAD33A3D247126DF005247E8 /* AppDelegate.h */,
 				CAD33A3E247126DF005247E8 /* AppDelegate.m */,
 				CAD33A40247126DF005247E8 /* ViewController.h */,
@@ -109,6 +117,8 @@
 				CAD33A48247126E4005247E8 /* Info.plist */,
 				CAD33A49247126E4005247E8 /* main.m */,
 				CAD33A4B247126E4005247E8 /* TableViewDemo.entitlements */,
+				CAD33A6D24712D49005247E8 /* EliminateJitter.h */,
+				CAD33A6E24712D49005247E8 /* EliminateJitter.m */,
 			);
 			path = TableViewDemo;
 			sourceTree = "<group>";
@@ -260,9 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD33A7224713935005247E8 /* LoadBalancer.m in Sources */,
 				CAD33A42247126DF005247E8 /* ViewController.m in Sources */,
 				CAD33A4A247126E4005247E8 /* main.m in Sources */,
 				CAD33A3F247126DF005247E8 /* AppDelegate.m in Sources */,
+				CAD33A6F24712D49005247E8 /* EliminateJitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
