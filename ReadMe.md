@@ -16,4 +16,30 @@ UI刷新均衡器: 负载均衡器，通过确保时间间隔里，最多触发2
 3. scrollPosition <= 0,说明触顶
 4. scrollPosition > docHeight-contHeight,说明触底部
 
+###TableCellView复用问题，导致渲染出错解决
+1. 统一Cell上的附属子视图刷新关联的，入口API：如refreshCellView.
+
+2. 相应NSTableView的Delegate事件，准备获取Cell
+```
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    VideoMemberListCellView *cellView = [self.memberTableView makeViewWithIdentifier:@"VideoMemberListCellView" owner:self];
+}
+```
+
+3. 更新Cell关联的新Model数据。
+
+4. 确保所有属性更新完毕后，调用1中的API，刷新Cell。
+注意：这里的刷新，需要确保Cell里面的SubView && subView's SubView. 跟随绑定的Model来刷新所有级别的子视图。
+如：NSTextFiled, NSIamgeView, NSBbutton, Other CustomView.
+
+####Cell复用：
+1.复用会导致Cell上的子视图，会残留上一个视图的Model数据。导致展示错误。
+
+2.比如『上一个成员的入会状态』 与 【当前成员的状态本不相同】。
+但是，刷新某个"间接（非直接关系）依赖于状态"的子控件的时候，先用『状态』刷新了视图。 后面更新了【当前成员的状态】。
+（这里有个错误前提：理所当然的认为，只要状态存在有效值，则认为这个状态是真实的状态）
+
+3.确保影响因子，正确更新后，才刷新对应的视图。
+
+
 
