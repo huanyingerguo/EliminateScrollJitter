@@ -16,7 +16,8 @@ UI刷新均衡器: 负载均衡器，通过确保时间间隔里，最多触发2
 3. scrollPosition <= 0,说明触顶
 4. scrollPosition > docHeight-contHeight,说明触底部
 
-###TableCellView复用问题，导致渲染出错解决
+###TableCellView复用问题
+
 1. 统一Cell上的附属子视图刷新关联的，入口API：如refreshCellView.
 
 2. 相应NSTableView的Delegate事件，准备获取Cell
@@ -33,6 +34,7 @@ UI刷新均衡器: 负载均衡器，通过确保时间间隔里，最多触发2
 如：NSTextFiled, NSIamgeView, NSBbutton, Other CustomView.
 
 ####Cell复用：
+
 1.复用会导致Cell上的子视图，会残留上一个视图的Model数据。导致展示错误。
 
 2.比如『上一个成员的入会状态』 与 【当前成员的状态本不相同】。
