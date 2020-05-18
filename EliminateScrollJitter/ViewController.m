@@ -90,15 +90,8 @@
 
 #pragma mark- Scroll Event
 - (void)scrollViewDidScroll:(NSNotification *)notify {
-//    NSScrollView *scrollView = self.fileListTableview.enclosingScrollView;
-//    NSPoint contentOffSet = scrollView.documentVisibleRect.origin;
-//
-//    NSInteger docHeight = scrollView.documentView.bounds.size.height;
-//    NSInteger contentHeight = scrollView.contentSize.height;
-//    NSInteger delt = docHeight - contentHeight;
-//    if (contentOffSet.y) {
-//
-//
+    NSScrollView *scrollView = self.fileListTableview.enclosingScrollView;
+    NSLog(@"documentVisibleRect=%@, \r\n docBounds=%@, \r\n contenSize=%@", NSStringFromRect(scrollView.documentVisibleRect), NSStringFromRect(scrollView.documentView.bounds),  NSStringFromSize(scrollView.contentSize));
     
     __weak typeof(self) weakSelf = self;
     [self.trigger triggerWithCallback:^{
@@ -113,6 +106,34 @@
             
         NSLog(@"subs=%@", arr1);
     }];
+}
+
+- (BOOL)isScrollToBottom {
+    NSScrollView *scrollView = self.fileListTableview.enclosingScrollView;
+    NSRect contentOffSet = scrollView.documentVisibleRect;
+    
+    NSInteger docHeight = scrollView.documentView.bounds.size.height; //NSTableView 的高度（>= scrollView.contentView.height）
+    NSInteger contentHeight = scrollView.contentSize.height; //clipView 的高度（也就是可视区域）
+    NSInteger delt = docHeight - contentHeight; //滚动条的正常（非触底或触顶后继续拉伸）滚动区域（0-delt）。
+    NSInteger offsetY = contentOffSet.origin.y; //滚动条的的滚动位置
+    
+    if (offsetY > delt ) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)isScrollToTop {
+    NSScrollView *scrollView = self.fileListTableview.enclosingScrollView;
+    NSRect contentOffSet = scrollView.documentVisibleRect;
+    NSInteger offsetY = contentOffSet.origin.y; //滚动条的的滚动位置
+    
+    if (offsetY < 0) {
+        return YES;
+    }
+    
+    return NO;
 }
 
 @end
